@@ -11,11 +11,11 @@ import '@/registerServiceWorker'
 import VueDisqus from 'vue-disqus'
 
 import * as firebase from 'firebase/app'
-import firebaseConfig from '@/.firebase'
+// import firebaseConfig from '@/.firebase'
 
 Vue.use(VueDisqus)
 
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp({})
 
 Vue.config.productionTip = false
 
