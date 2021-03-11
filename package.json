@@ -1,0 +1,81 @@
+{
+  "name": "issuit",
+  "displayName": "Issuit",
+  "icon": "favicon.ico",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Roberto Monteiro",
+    "url": "https://linkedin.com/in/flourigh"
+  },
+  "description": "Envie textos de forma eficiente para outro dispositivo.",
+  "config": {
+    "color": "#000000",
+    "terms": "As informações enviadas são trocadas, apenas a última informação enviada é armazenada por tempo indeterminado."
+  },
+  "keywords": [
+    "Send",
+    "Receive",
+    "Paste",
+    "Text",
+    "Sync"
+  ],
+  "homepage": "https://issuit.redire.me",
+  "qna": "https://social.redire.me/issuit",
+  "bugs": "https://bitbucket.org/flourigh/issuit-app/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/flourigh/issuit-app.git"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test": "npm run build && serve -s dist",
+    "ngrok": "ngrok http -host-header=rewrite",
+    "lint": "vue-cli-service lint",
+    "deploy": "firebase deploy --only hosting:issuit",
+    "pwa-icons": "rm ./public/img/icons/* && vue-asset-generate -a ./public/favicon.png -o ./public/img/icons/ && pwa-asset-generator ./public/favicon.png ./public/img/icons/"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.5",
+    "crypto-js": "^3.3.0",
+    "firebase": "^7.14.4",
+    "lodash": "^4.17.15",
+    "register-service-worker": "^1.7.1",
+    "uuid": "^3.4.0",
+    "vue": "^2.6.11",
+    "vue-disqus": "^3.0.5",
+    "vue-router": "^3.1.6",
+    "vuetify": "^2.2.28",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-plugin-pwa": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-vuetify": "^0.4.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "firebase-tools": "^7.16.2",
+    "lint-staged": "^9.5.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "vue-cli-plugin-vuetify": "^1.1.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.4.3"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
