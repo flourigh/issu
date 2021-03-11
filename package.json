@@ -37,7 +37,7 @@
     "pwa-icons": "rm ./public/img/icons/* && vue-asset-generate -a ./public/favicon.png -o ./public/img/icons/ && pwa-asset-generator ./public/favicon.png ./public/img/icons/"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "crypto-js": "^3.3.0",
     "firebase": "^7.14.4",
